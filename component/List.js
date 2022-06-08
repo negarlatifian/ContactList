@@ -1,6 +1,5 @@
-import { StyleSheet, Text, View, Button, Pressable } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { customers } from "../../customers";
+import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import { customers } from './customers';
 
 const List = ({ navigation }) => {
   return (
@@ -9,17 +8,13 @@ const List = ({ navigation }) => {
       {customers.map((x, k) => (
         <Pressable
           key={k}
-          onPress={() => navigation.navigate("Customer", { index: { k } })}
+          onPress={() => navigation.navigate('Customer', { index: { k } })}
         >
           <Text>
             {x.name.first} {x.name.last}
           </Text>
         </Pressable>
       ))}
-      <Button
-        title="Go to Customer"
-        onPress={() => navigation.navigate("Customer")}
-      />
     </View>
   );
 };
@@ -29,8 +24,8 @@ export default List;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

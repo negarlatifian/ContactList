@@ -1,6 +1,5 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet, Text, View, Button } from "react-native";
-import { customers } from "../../customers";
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { customers } from './customers';
 
 const Customer = ({ navigation, route }) => {
   const index = route.params.index.k;
@@ -15,7 +14,7 @@ const Customer = ({ navigation, route }) => {
       <Text>Email: {customer.email}</Text>
       <Text>Country: {customer.location.country}</Text>
 
-      <Button title="Go to List" onPress={() => navigation.navigate("List")} />
+      <Button title="Go to List" onPress={() => navigation.navigate('List')} />
     </View>
   );
 };
@@ -25,8 +24,8 @@ export default Customer;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
