@@ -4,13 +4,13 @@ import { customers } from './customers';
 const List = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>List</Text>
+      <Text testID='mainTitle'>List</Text>
       {customers.map((x, k) => (
-        <Pressable
+        <Pressable 
           key={k}
           onPress={() => navigation.navigate('Customer', { index: { k } })}
         >
-          <Text>
+          <Text testID={`testName${k}`}>
             {x.name.first} {x.name.last}
           </Text>
         </Pressable>

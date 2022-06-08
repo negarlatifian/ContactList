@@ -11,7 +11,7 @@ const Customer = ({ navigation, route }) => {
       <Text>
         Name: {customer.name.first} {customer.name.last}
       </Text>
-      <Text>Email: {customer.email}</Text>
+      <Text testID="customerEmail">Email: {customer.email}</Text>
       <Text>Country: {customer.location.country}</Text>
 
       <Button title="Go to List" onPress={() => navigation.navigate('List')} />
